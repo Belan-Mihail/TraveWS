@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --main-color: #ff0;
+    --light-white: rgba(255, 255, 255, .5);
+    --light-black: rgba(0,0,0,.3);
+    --light-bg: rgba(255,255,255,.1);
+    --white: #fff;
+    --black: #000;
+}
+
+*{
+    font-family: 'Comfortaa', cursive;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+
+*::section{
+    background-color: var(--main-color);
+    color: var(--black);
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+    }
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    color: var(--white);
+}
+
+body {
+    background-color: var(--black);
+    overflow-x: hidden;
+}
+
+
+.container {
+    padding-top: 10rem;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.btn {
+    display: block;
+    border-radius: .5rem;
+    padding: 1.2rem 3rem;
+    background: var(--main-color);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    transition: .2s linear;
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+header {
+    position: fixed;
+    top: 0;left: 0; right: 0;
+    background: linear-gradient(0deg, transperant, var(--black));
+    z-index: 1000;
+}
+
+.heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.navbar a {
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: var(--light-white);
+    transition: color .2s linear;
+}
+
+.navbar a:hover {
+    color: var(--white);
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+}
+
+
+/* section home */
+
+
+.home {
+    background: url(./../img/home-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.home .flex {
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home form {
+    background-color: var(--light-bg);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 50rem;
+    backdrop-filter: blur(.4rem);
+}
+
+
+.home form h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.home form p {
+    padding-top: 1rem;
+    font-size: 1.7rem;
+    color: var(--light-white);
+}
+
+.home .box {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    text-transform: none;
+    color: var(--white);
+    background: var(--light-black);
+    margin: 1rem 0;
+}
+
+.home .box::placeholder {
+    color: var(--light-white);
+}
+
+/* section about */
+
+
+.about {
+    background: url(./../img/about-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.details {
+    border-radius: .5rem;
+    background: url(./../img/details-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 60vh;
+    border-radius: .5rem;
+}
+
+.details .box {
+    width: 50rem;
+    background-color: var(--light-bg);
+    text-align: center;
+    padding: 3rem 2rem;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+
+.details .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+    padding-bottom: .5rem;
+    
+}
+
+.details .box p {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--light-white);
+    line-height: 2;
+}
+
+.details .btn {
+    display: inline-block;
+    width: auto;
+}
+
+.about .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.about .grid .box {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+.about .grid .box:hover {
+    background-color: var(--light-black);
+    
+}
+
+.about .grid .box img {
+    height: 20rem;
+    transition: .2s linear;
+}
+
+.about .grid .box img:hover {
+    transform: scale(1.1);  /* увеличивает размер картинки в 1.1 раза = как будто приближение */
+}
+
+.about .grid .box h3 {
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.about .grid .box p {
+    line-height: 2;
+    line-height: 1.6rem;
+    color: var(--light-white)
+}
+
+/* reviews */
+
+.reviews {
+    background: url(./../img/reviews-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.reviews .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.reviews .grid .box {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+
+.reviews .grid .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.reviews .grid .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.reviews .grid .box p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: var(--light-white);
+    padding: 1rem 0;
+}
+
+.reviews .grid .box .stars {
+    margin-top: 1rem;
+}
+
+.reviews .grid .box .stars i {
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.reviews .grid .box:hover {
+    background-color: var(--light-black)
+}
+
+.tours {
+    background: url(./../img/tour-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.tours .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.tours .grid .box {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+    position: relative;
+}
+
+.tours .grid .box:hover {
+    background: var(--light-black);
+}
+
+.tours .grid .box .price {
+    position: absolute;
+    top: 3rem; left: 3rem;
+    border-radius: .5rem;
+    background: var(--light-black);
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+}
+
+.tours .grid .box .price:hover {
+    background: var(--black);
+}
+
+.tours .grid .box .price i {
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+
+.tours .grid .box .price span {
+    color: var(--white);
+}
+
+.tours .grid .box .image {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tours .grid .box .name {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.tours .grid .box .adress {
+    font-size: 1.7rem;
+    color: var(--light-white);
+    line-height: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+/* destinations */
+
+.destinations {
+    background: url(./../img/destination-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.destinations .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.destinations .grid .box {
+    height: 40rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.destinations .grid .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.destinations .grid .box h3 {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-black);
+    backdrop-filter: blur(.4rem);
+    transition: .2s linear;
+    opacity: 0;
+}
+
+.destinations .grid .box h3 span {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.destinations .grid .box:hover h3 {
+    opacity: 1;
+}
+
+/* contacts */
+
+.contact {
+    background: url(./../img/contact-bg.jpg) no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .row .map {
+    width: 100%;
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.contact .row form {
+    
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.contact .row form h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    background-color: var(--light-black);
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: none;
+}
+
+.contact .row form::placeholder {
+    color: var(--light-white);
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .grid {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact .grid .box {
+    background-color: var(--light-bg);
+    padding: 3rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+
+.contact .grid .box i {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    background-color: var(--light-black);
+    border-radius: .5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.contact .grid .box h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    padding: .5rem 0;
+}
+
+.contact .grid .box a {
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--light-white);
+    line-height: 1.5rem;
+    text-transform: none;
+}
+
+.contact .grid .box a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.contact .credit {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    color: var(--light-white);
+}
+
+.contact .credit span {
+    color: var(--main-color);
+}
+
+
+
+/* media */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .heading {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .flex {
+        position: relative;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%; left: 2rem; right: 2rem;
+        
+        background-color: var(--light-black);
+        backdrop-filter: blur(.4rem);
+        border-radius: .5rem;
+        /*width: 90%;*/
+        /*margin: 0 auto;*/ 
+        transform: scale(0);
+        transform-origin: top right;
+        padding: 1.5rem .5rem;
+        
+    }
+    .navbar.active {
+        transform: scale(1);
+        transition: .2s linear;
+    }
+    .navbar a {
+        display: block;
+        padding: 1.5rem .5rem;
+        margin: .5rem 1.5rem;
+        color: var(--white);
+        border-radius: .5rem;
+    }
+
+    .navbar a:hover {
+        background-color: var(--light-bg);
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 450) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+}
+
+/* 01:04:01 */
